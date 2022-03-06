@@ -17,7 +17,7 @@
 	   |---> services: responsible for all the use cases related to the entity in a single file
     |--->application: responsible for the application logic (CRUD operations)
     |--->adapters: responsible for the interfaces that communicates with the out side services (interfaces and repositories for prisma)
-    |--->presenters: responsible for the reception of the requests (controllers)
+    |--->presentation: responsible for the reception of the requests (controllers)
 
 4. since it's an API, we will be using express for this one
  > yarn add express
