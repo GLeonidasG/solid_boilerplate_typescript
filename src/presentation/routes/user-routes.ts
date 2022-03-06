@@ -1,4 +1,4 @@
-import {Router} from "express"
+import { Router } from "express"
 import { UserRepository } from "src/adapters/PrismaRepositories/UserRepository";
 import { UserService } from "src/application/services/users/UserService";
 import { UserController } from "../controllers/UserController";
@@ -9,6 +9,6 @@ const userRepository = new UserRepository();
 const userServices = new UserService(userRepository);
 const userController = new UserController(userServices)
 
-userRoutes.post("/users/create", userController.create);
+userRoutes.post("/create", userController.create);
 
 export default userRoutes;
