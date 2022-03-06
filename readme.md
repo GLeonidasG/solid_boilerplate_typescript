@@ -8,6 +8,7 @@
  	> yarn add prisma
  3. folder structure: will be using SOLID principles with clean architecture so should be something like this
 
+```
  src
  |--|
     |--->domain: responsible for the business logic (models, services)
@@ -18,6 +19,7 @@
     |--->application: responsible for the application logic (CRUD operations)
     |--->adapters: responsible for the interfaces that communicates with the out side services (interfaces and repositories for prisma)
     |--->presentation: responsible for the reception of the requests (controllers)
+```
 
 4. since it's an API, we will be using express for this one
  > yarn add express
