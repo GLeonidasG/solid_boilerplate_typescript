@@ -10,7 +10,7 @@ export class UserService {
 
     async create(user: CreateUserDTO){
         const userModel = new User(user);
-        if(!userModel.checkPasswordComplexity()) throw new Error("Password is not complex enough");
+        if(!userModel.checkPasswordComplexity(true)) throw new Error("Password is not complex enough");
         return await this.userRepository.create(userModel);
     }
 
