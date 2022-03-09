@@ -1,5 +1,5 @@
-import { IUserRepository } from "src/application/interfaces/IUserRepository";
-import { CreateUserDTO, User } from "src/domain/entities/users/User";
+import { IUserRepository } from "../../../../src/application/interfaces/IUserRepository";
+import { CreateUserDTO, User } from "../../../../src/domain/entities/users/User";
 
 export class UserService {
     private userRepository: IUserRepository

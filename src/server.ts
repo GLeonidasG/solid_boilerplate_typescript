@@ -1,6 +1,6 @@
 import Express, { Router } from "express";
 import userRoutes from "./presentation/routes/user-routes";
-
+import cors from "cors"
 export class Server {
 
     private app!: Express.Application;
@@ -14,6 +14,8 @@ export class Server {
 
     public runApp(): void {
         this.app = Express();
+        this.app.use(Express.json());
+        this.app.use(cors());
         this.app.get("/", (req, res) => res.send({ message: "Hello world" }))
         this.setupRoutes();
         this.app.listen(this.PORT, () => console.log(`Listening on port http://localhost:${this.PORT}`));

@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { UserRepository } from "src/adapters/PrismaRepositories/UserRepository";
-import { UserService } from "src/application/services/users/UserService";
+import { UserRepository } from "../../../src/adapters/PrismaRepositories/UserRepository";
+import { UserService } from "../../../src/application/services/users/UserService";
 import { UserController } from "../controllers/UserController";
 
 const userRoutes = Router();
