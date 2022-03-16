@@ -10,7 +10,7 @@ export class UserService {
 
     async create(user: CreateUserDTO){
         const userModel = new User(user);
-        if(!userModel.checkPasswordComplexity(true)) throw new Error("Password is not complex enough");
+        if(!userModel.checkPasswordComplexity()) throw new Error("Password is not complex enough");
         return await this.userRepository.create(userModel);
     }
 
@@ -18,6 +18,10 @@ export class UserService {
 
     read(){}
 
-    delete(){}
+    async delete(username: string){
+      const userModel = await this.userRepository.findByUsername(username);
+      if (!userModel) throw Error("User not found!")
+      await this.userRepository.delete(userModel.id)
+    }
 
 }

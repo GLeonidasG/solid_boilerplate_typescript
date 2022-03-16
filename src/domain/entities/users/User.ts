@@ -24,9 +24,9 @@ export class User {
     }
 
     // An entity class can also do some validation
-    checkPasswordComplexity(param: boolean): boolean{
+    checkPasswordComplexity(): boolean{
         // Some dummy validation 
-        return param;
+        return this.password.length > 0;
     }
 
 
